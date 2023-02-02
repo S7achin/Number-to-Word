@@ -34,9 +34,15 @@ int main()
 	printf("\n%d",sp);/
 /*	printf("\n %d thousands,%d hundreds, %d 
       tens, %d units", TH,H, T, U);*/
-	printf("\n %s thousand %s hundred %s %s ", 
+	if(TH==0){
+      	printf("\n %s hundred %s %s ", single_digits[H],
+	tens_multiple[T],single_digits[U]);
+	  }
+	  else{
+	  	printf("\n %s thousand %s hundred %s %s ", 
 	single_digits[TH],single_digits[H],
 	tens_multiple[T],single_digits[U]);
+	  }
 	
 	return 0;
 }
